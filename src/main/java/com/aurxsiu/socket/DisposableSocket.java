@@ -8,7 +8,6 @@ import java.net.Socket;
  * */
 @Deprecated
 public class DisposableSocket {
-    //todo 升级nio
     public static Socket sendFile(String ip, int port, File file) throws IOException {
         Socket socket = new Socket(ip, port);
         try (FileInputStream fileInputStream = new FileInputStream(file)) {

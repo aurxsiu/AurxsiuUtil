@@ -1,5 +1,6 @@
 package com.aurxsiu;
 
+import com.aurxsiu.file.FileHelper;
 import com.aurxsiu.scanner.ScannerUtil;
 import com.aurxsiu.scanner.sub.ScanCompleteAction;
 import com.aurxsiu.scanner.sub.ScanCompleteCondition;
@@ -9,12 +10,10 @@ import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+        fileTest();
+    }
 
-        System.out.println("hello");
-
-        System.out.println(Date.from(Instant.now()).toString());
-        System.out.println(Date.from(Instant.parse(Date.from(Instant.now()).toString())));
-
+    private static void scanTest(){
         ScannerUtil.scanLoop(new ScanCompleteAction() {
             @Override
             public void act(String s) {
@@ -26,5 +25,9 @@ public class Main {
                 return ScanCompleteCondition.super.judge(s);
             }
         });
+    }
+
+    private static void fileTest(){
+        System.out.println(FileHelper.getRootPath());
     }
 }

@@ -9,6 +9,7 @@ import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 
 public class FileHelper {
+
     public static String getRootPath(){
         return System.getProperty("user.dir");
     }
