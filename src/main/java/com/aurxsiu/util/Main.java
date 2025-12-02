@@ -6,6 +6,7 @@ import com.aurxsiu.util.scanner.sub.ScanCompleteAction;
 import com.aurxsiu.util.scanner.sub.ScanCompleteCondition;
 
 public class Main {
+//    todo:重构1.8
     public static void main(String[] args) {
         fileTest();
     }
